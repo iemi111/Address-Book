@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/contact_list_add"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/contactbn"
+            android:fontFamily="serif"
+            android:padding="8dp"
+            android:text="Add contact"
+            android:textColor="@color/yellow"
+            android:textSize="36sp" />
+
+    <ListView
+        android:id="@+id/contacts_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/contact_list_add"
+        android:divider="#4d4d4d"
+        android:dividerHeight="1dp"
+        android:padding="8dp" />
+
+    </RelativeLayout>

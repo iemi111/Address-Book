@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/contact_form_name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:hint="Name"
+            android:inputType="text|textCapWords"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+            android:textColorHint="@color/place_autocomplete_prediction_primary_text_highlight"
+            android:textSize="30sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/contact_form_phone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:hint="Phone number"
+            android:inputType="phone"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textColorHint="@color/place_autocomplete_prediction_primary_text_highlight"
+            android:textSize="30sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_form_email" />
+
+        <EditText
+            android:id="@+id/contact_form_email"
+            android:layout_width="match_parent"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+            android:textColorHint="@color/place_autocomplete_prediction_primary_text_highlight"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="30sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_form_name" />
+
+        <EditText
+            android:id="@+id/contact_form_relation"
+            android:layout_width="match_parent"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+            android:textColorHint="@color/place_autocomplete_prediction_primary_text_highlight"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:hint="Relation"
+            android:inputType="text"
+            android:textSize="30sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_form_phone" />
+
+        <Button
+            android:id="@+id/contact_form_select_address"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/contactbn"
+            android:elevation="0dp"
+            android:fontFamily="serif"
+            android:padding="8dp"
+            android:text="Choose Address"
+            android:textColor="@color/yellow"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/contact_form_address_text"
+            android:layout_width="361dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="fill"
+            android:padding="8dp"
+            android:text="Address"
+            android:textAlignment="gravity"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+            android:textSize="30sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/contact_form_select_photo"
+            app:layout_constraintHorizontal_bias="0.571"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/contact_form_take_photo"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/contactbn"
+            android:fontFamily="serif"
+            android:padding="8dp"
+            android:textSize="36sp"
+            android:textColor="@color/yellow"
+            android:text="Take photo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_form_address_text" />
+
+        <Button
+            android:id="@+id/contact_form_select_photo"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/contactbn"
+            android:fontFamily="serif"
+            android:padding="8dp"
+            android:text="Select photo"
+            android:textColor="@color/yellow"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@+id/contact_form_imageView" />
+
+        <ImageView
+            android:id="@+id/contact_form_imageView"
+            android:layout_width="347dp"
+            android:layout_height="375dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/contact_form_save"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_form_take_photo"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+        <Button
+            android:id="@+id/contact_form_save"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/contactbn"
+            android:fontFamily="serif"
+            android:padding="8dp"
+            android:textSize="36sp"
+            android:textColor="@color/yellow"
+            android:text="Save Contact"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="840dp" />
+    </LinearLayout>
+</ScrollView>
